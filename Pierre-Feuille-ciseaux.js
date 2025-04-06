@@ -11,7 +11,7 @@ function Jeux(event) {
   const choixJoueur = event.target.id;
   const choixBot = BOT();
 
-  //Résultat
+  //variable
   let result = "";
   let emojiJoueur = "";
   let emojiBOT = "";
@@ -45,6 +45,9 @@ function Jeux(event) {
   } else {
     emojiBOT = C;
   }
+
+  document.querySelector(".BOT p").textContent = emojiBOT;
+
   //Affiche les différents choix et le résultat
   document.querySelector("#resultat-choix-joueur").textContent =
     "Le choix du joueur est : " + choixJoueur + emojiJoueur;
